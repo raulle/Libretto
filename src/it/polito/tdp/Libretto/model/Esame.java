@@ -75,8 +75,11 @@ public class Esame {
 
 	@Override
 	public String toString() {
-		return "Esame [codice=" + codice + ", titolo=" + titolo + ", docente=" + docente + ", superato=" + superato
-				+ ", voto=" + voto + ", dataSuperamento=" + dataSuperamento + "]";
+		if(this.superato)
+			return "Esame codice=" + codice + ", titolo=" + titolo + ", docente=" + docente + ", superato=" + superato
+				+ ", voto=" + voto + ", dataSuperamento=" + dataSuperamento;
+		else
+			return "Esame codice=" + codice + ", titolo=" + titolo + ", docente=" + docente;
 	}
 
 	@Override
